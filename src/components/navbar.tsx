@@ -9,8 +9,9 @@ const Navbar = () => {
     <section className="relative min-h-screen overflow-hidden">
   <Spotlight
     width={800}
-  height={1600}
-  xOffset={100}
+  height={1500}
+  duration={8}
+  xOffset={7}
   gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 80%)"
   gradientSecond="radial-gradient(50% 50% at 50% 50%,   rgba(59,130,246,0.15) 50%, transparent 100%)"
   gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
