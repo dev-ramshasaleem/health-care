@@ -8,12 +8,11 @@ const Navbar = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
   <Spotlight
-    width={700}
-  height={1500}
-  duration={10}
+    width={800}
+  height={1600}
   xOffset={100}
-  gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 100%)"
-  gradientSecond="radial-gradient(50% 50% at 50% 50%, rgba(59,130,246,0.25) 0%, transparent 100%)"
+  gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 80%)"
+  gradientSecond="radial-gradient(50% 50% at 50% 50%,   rgba(59,130,246,0.15) 50%, transparent 100%)"
   gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
   />
     <header className="relative z-50 mt-2 mx-auto max-w-5xl rounded-lg border bg-white shadow-md border-white/10">
