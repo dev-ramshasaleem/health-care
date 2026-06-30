@@ -9,7 +9,7 @@ const dm_sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CarePlus Healthcare",
+  title: "CarePlus - Healthcare",
   description: "The Future of Healthcare Workflow is Here",
 };
 

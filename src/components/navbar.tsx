@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Spotlight } from "./ui/spotlight-new";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
+import Image from "next/image";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -20,11 +21,15 @@ const Navbar = () => {
       />
       <header className="relative z-50 mt-2  mx-auto max-w-5xl rounded-lg border bg-white shadow-md border-white/10">
         <div className="flex items-center justify-between px-3 py-1">
-          <h1 className="text-3xl font-bold">
-            <span className="text-blue-600">Care</span>
-            <span className="text-black">Plus</span>
-          </h1>
-          <nav className="flex gap-4  items-center ">
+          <div className="flex items-center gap-1">
+            <Image src="/Plus.png" alt="icon" width={25} height={25} />
+
+            <h1 className="text-3xl font-bold">
+              <span className="text-blue-400">Care</span>
+              <span className="text-black">Plus</span>
+            </h1>
+          </div>
+          <nav className="flex gap-4 items-center font-semibold ">
             <Link href="/" className="text-black-700 hover:text-blue-600">
               Home
             </Link>
