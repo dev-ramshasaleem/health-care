@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/src/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
+import LogoCloud from "../components/logo-cloud";
 
 export default function Home() {
   return (
     <div>
       <main>
         <Navbar />
-        <div className="relative w-full"></div>
+        <div className="relative w-full"> </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center  px-4">
           <h1 className="text-black text-5xl md:text-6xl font-bold">
             The Future of Healthcare
@@ -37,6 +38,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        <LogoCloud />
       </main>
     </div>
   );
