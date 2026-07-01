@@ -5,6 +5,7 @@ import Link from "next/link";
 import LogoCloud from "../components/logo-cloud";
 import Problems from "../components/problems";
 import Features from "../components/features";
+import Blogs from "../components/blogs";
 
 export default function Home() {
   return (
@@ -44,8 +45,11 @@ export default function Home() {
         <div id="problems" className="pt-50 min-h-screen">
           <Problems />
         </div>
-        <div id="features" className="pt-40 min-h-screen">
+        <div id="features" className="pt-20 min-h-screen">
           <Features />
+        </div>
+        <div id="blogs" className="pt-10 min-h-screen">
+          <Blogs />
         </div>
       </main>
     </div>
