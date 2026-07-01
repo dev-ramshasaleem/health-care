@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen w-full mx-auto">
         <div className="absolute inset-0 flex flex-col  items-center justify-center px-4 text-center">
-          <h1 className="text-black text-5xl md:text-6xl font-bold pt-80">
+          <h1 className="text-black text-5xl  md:text-5xl lg:text-6xl  font-bold pt-80">
             The Future of Healthcare
             <br /> Workflow is Here
           </h1>
@@ -41,10 +41,10 @@ export default function Home() {
           <Image src="/care.png" alt="care" width={1200} height={60} />
           <LogoCloud />
         </div>
-        <div id="problems" className="pt-50">
+        <div id="problems" className="pt-50 min-h-screen">
           <Problems />
         </div>
-        <div id="features" className="pt-40">
+        <div id="features" className="pt-40 min-h-screen">
           <Features />
         </div>
       </main>

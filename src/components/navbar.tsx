@@ -5,6 +5,7 @@ import { Spotlight } from "./ui/spotlight-new";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -20,8 +21,8 @@ const Navbar = () => {
         gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
       />
       <header className="relative z-50 mt-2  mx-auto max-w-5xl rounded-lg border bg-white shadow-md border-white/10">
-        <div className="flex items-center justify-between px-3 py-1">
-          <div className="flex items-center gap-1">
+        <div className="grid grid-cols-3 items-center px-4 py-3">
+          <div className="flex items-center gap-2">
             <Image src="/Plus.png" alt="icon" width={25} height={25} />
 
             <h1 className="text-3xl font-bold">
@@ -29,7 +30,7 @@ const Navbar = () => {
               <span className="text-black">Plus</span>
             </h1>
           </div>
-          <nav className="flex gap-4 items-center font-semibold ">
+          <nav className="hidden md:flex justify-center gap-4 font-semibold">
             <Link href="/" className="text-black-700 hover:text-blue-600">
               Home
             </Link>
@@ -55,19 +56,24 @@ const Navbar = () => {
               Blogs
             </Link>
           </nav>
-          <div className="flex items-center justify-center md:justify-end gap-4">
-            {isSignedIn ? (
-              <UserButton />
-            ) : (
-              <Link href="/sign-in">
-                <Button
-                  variant="outline"
-                  className="bg-black text-white py-4 px-4"
-                >
-                  Login
-                </Button>
-              </Link>
-            )}
+          <div className="flex justify-end items-center gap-4">
+            <button className="md:hidden">
+              <Menu className="w-6 h-6" />
+            </button>
+            <div className="flex items-center justify-center md:justify-end gap-4">
+              {isSignedIn ? (
+                <UserButton />
+              ) : (
+                <Link href="/sign-in">
+                  <Button
+                    variant="outline"
+                    className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
+                  >
+                    Login
+                  </Button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </header>
