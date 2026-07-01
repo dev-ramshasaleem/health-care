@@ -41,7 +41,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="#feature"
+              href="#features"
               className="text-black-700 hover:text-blue-600"
             >
               Features

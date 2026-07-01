@@ -22,7 +22,7 @@ const Problems = () => {
         Healthcare should be focused on the patient, but outdated system turn
         coordination into <br /> a massive administrative burden.
       </p>
-      <div className="flex gap-4 mx-auto mt-10">
+      <div className="flex gap-6 mx-auto mt-10">
         <Card className="flex size-16px w-80 h-auto  bg-blue-100 border-blue-800">
           <Clock className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
@@ -33,7 +33,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="size-16px w-80 h-auto  bg-blue-500 border-blue-800 text-white">
+        <Card className="size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
           <Annoyed className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">

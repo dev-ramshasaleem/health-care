@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoCloud from "../components/logo-cloud";
 import Problems from "../components/problems";
+import Features from "../components/features";
 
 export default function Home() {
   return (
@@ -42,6 +43,9 @@ export default function Home() {
         </div>
         <div id="problems" className="pt-50">
           <Problems />
+        </div>
+        <div id="features" className="pt-40">
+          <Features />
         </div>
       </main>
     </div>
