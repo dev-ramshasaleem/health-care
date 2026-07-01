@@ -12,7 +12,7 @@ const Navbar = () => {
     <section className="relative min-h-screen overflow-hidden">
       <Spotlight
         width={800}
-        height={1500}
+        height={1000}
         duration={8}
         xOffset={7}
         gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 80%)"
@@ -33,22 +33,25 @@ const Navbar = () => {
             <Link href="/" className="text-black-700 hover:text-blue-600">
               Home
             </Link>
-            <Link href="/about" className="text-black-700 hover:text-blue-600">
+            <Link
+              href="#problems"
+              className="text-black-700 hover:text-blue-600"
+            >
               About
             </Link>
 
             <Link
-              href="/feature"
+              href="#feature"
               className="text-black-700 hover:text-blue-600"
             >
               Features
             </Link>
 
-            <Link href="/price" className="text-black-700 hover:text-blue-600">
+            <Link href="#price" className="text-black-700 hover:text-blue-600">
               Pricing
             </Link>
 
-            <Link href="/blogs" className="text-black-700 hover:text-blue-600">
+            <Link href="#blogs" className="text-black-700 hover:text-blue-600">
               Blogs
             </Link>
           </nav>
