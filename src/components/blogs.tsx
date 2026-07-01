@@ -15,7 +15,7 @@ const Blogs = (props: Props) => {
       </h1>
       <p className="mt-4 text-black-200  text-center">
         Our partners' success is the clearest metric of our commitment to
-        secure, human- <br /> centered workflow innovation
+        secure, human- <br /> centered workflow innovation.
       </p>
       <Image
         src="/blog.png"
