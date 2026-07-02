@@ -9,6 +9,7 @@ import Blogs from "../components/blogs";
 import Price from "../components/price";
 import Faq from "../components/faq";
 import Demo from "../components/demo";
+import About from "../components/about";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
           <Image src="/care.png" alt="care" width={1200} height={60} />
           <LogoCloud />
         </div>
-        <div id="problems" className="pt-50 min-h-screen">
+        <div className="pt-50 min-h-screen">
           <Problems />
         </div>
         <div id="features" className="pt-20 min-h-screen">
@@ -61,6 +62,9 @@ export default function Home() {
         </div>
         <div className="pt-10 min-h-screen">
           <Demo />
+        </div>
+        <div id="about" className="pt-15 min-h-screen">
+          <About />
         </div>
       </main>
     </div>
