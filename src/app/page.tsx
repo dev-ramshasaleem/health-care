@@ -6,6 +6,7 @@ import LogoCloud from "../components/logo-cloud";
 import Problems from "../components/problems";
 import Features from "../components/features";
 import Blogs from "../components/blogs";
+import Price from "../components/price";
 
 export default function Home() {
   return (
@@ -50,6 +51,9 @@ export default function Home() {
         </div>
         <div id="blogs" className="pt-10 min-h-screen">
           <Blogs />
+        </div>
+        <div id="price" className="pt-10 min-h-screen">
+          <Price />
         </div>
       </main>
     </div>
