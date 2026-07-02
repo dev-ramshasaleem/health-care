@@ -38,7 +38,7 @@ export default function Home() {
               variant="outline"
               className="w-35 h-12 text-black border-black bg-white hover:bg-black/10"
             >
-              <Link href="/price">View Pricing</Link>
+              <Link href="#price">View Pricing</Link>
             </Button>
           </div>
           <br />
