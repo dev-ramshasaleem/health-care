@@ -7,6 +7,8 @@ import Problems from "../components/problems";
 import Features from "../components/features";
 import Blogs from "../components/blogs";
 import Price from "../components/price";
+import Faq from "../components/faq";
+import Demo from "../components/demo";
 
 export default function Home() {
   return (
@@ -54,6 +56,11 @@ export default function Home() {
         </div>
         <div id="price" className="pt-10 min-h-screen">
           <Price />
+          <br />
+          <Faq />
+        </div>
+        <div className="pt-10 min-h-screen">
+          <Demo />
         </div>
       </main>
     </div>
