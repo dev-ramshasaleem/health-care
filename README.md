@@ -1,6 +1,6 @@
 # 🏥 CarePlus – Healthcare Management System
 
-CarePlus is a modern healthcare management web application built with **Next.js**, **TypeScript**, **Tailwind CSS**, **Shadcn UI**, **Clerk Authentication**, and **Prisma ORM**. It simplifies patient registration, appointment booking, and healthcare management through an intuitive and responsive interface.
+CarePlus is a modern healthcare management web application built with **Next.js**, **TypeScript**, **Tailwind CSS**, **Shadcn UI**, and **Clerk Authentication**. It simplifies patient registration, appointment booking, and healthcare management through an intuitive and responsive interface.
 
 ---
 
@@ -35,7 +35,7 @@ CarePlus is a modern healthcare management web application built with **Next.js*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/careplus.git
+git clone https://github.com/dev-ramshasaleem/health-care.git
 ```
 
 ### 2. Navigate to the Project
@@ -57,7 +57,7 @@ Create a `.env.local` file in the root directory.
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
 CLERK_SECRET_KEY=your_secret_key
-
+```
 ---
 
 ## 🎯 Future Improvements
