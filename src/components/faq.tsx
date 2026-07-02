@@ -27,7 +27,7 @@ const Faq = (props: Props) => {
         <Accordion type="single">
           <AccordionItem
             value="item-1"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm "
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100 hover:bg-white px-6 shadow-sm "
           >
             <AccordionTrigger className="text-black  text-xl">
               Can I try it before paying?
@@ -41,7 +41,7 @@ const Faq = (props: Props) => {
           </AccordionItem>
           <AccordionItem
             value="item-2"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm"
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100 hover:bg-white px-6 shadow-sm"
           >
             <AccordionTrigger className="text-black  text-xl">
               Is my data safe and HIPAA compliant?
@@ -54,7 +54,7 @@ const Faq = (props: Props) => {
           </AccordionItem>
           <AccordionItem
             value="item-3"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm"
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100 hover:bg-white px-6 shadow-sm"
           >
             <AccordionTrigger className="text-black  text-xl">
               Can I change or cancel my plan anytime?
@@ -67,7 +67,7 @@ const Faq = (props: Props) => {
           </AccordionItem>
           <AccordionItem
             value="item-4"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm"
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100 hover:bg-white px-6 shadow-sm"
           >
             <AccordionTrigger className="text-black  text-xl">
               What kind of support do you provide?
@@ -80,7 +80,7 @@ const Faq = (props: Props) => {
           </AccordionItem>
           <AccordionItem
             value="item-5"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm"
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100  hover:bg-white px-6 shadow-sm"
           >
             <AccordionTrigger className="text-black  text-xl">
               How do I know which plan fits my team?
@@ -94,7 +94,7 @@ const Faq = (props: Props) => {
           </AccordionItem>
           <AccordionItem
             value="item-6"
-            className="mb-4 w-250 items-center rounded-xl border bg-blue-50 hover:bg-white px-6 shadow-sm"
+            className="mb-4 w-250 items-center rounded-xl border bg-blue-100  hover:bg-white px-6 shadow-sm"
           >
             <AccordionTrigger className="text-black  text-xl">
               Do you integrate with our existing EHR or billing software?

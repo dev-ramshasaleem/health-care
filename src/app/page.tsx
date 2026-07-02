@@ -60,10 +60,10 @@ export default function Home() {
           <br />
           <Faq />
         </div>
-        <div className="pt-10 min-h-screen">
+        <div className="pt-10 ">
           <Demo />
         </div>
-        <div id="about" className="pt-15 min-h-screen">
+        <div id="about" className="pt-30 min-h-screen">
           <About />
         </div>
       </main>
