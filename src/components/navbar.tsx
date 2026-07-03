@@ -5,9 +5,11 @@ import { Spotlight } from "./ui/spotlight-new";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const { isSignedIn } = useUser();
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -54,9 +56,26 @@ const Navbar = () => {
             </Link>
           </nav>
           <div className="flex justify-end items-center gap-4">
-            <button className="md:hidden">
-              <Menu className="w-6 h-6" />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative z-50"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
+            {isOpen && (
+              <div className="absolute top-full left-0 w-full bg-white shadow-lg lg:hidden">
+                <div className="flex flex-col p-6 gap-4">
+                  <Link href="#about">About</Link>
+                  <Link href="#features">Features</Link>
+                  <Link href="#price">Pricing</Link>
+                  <Link href="#blogs">Blogs</Link>
+                </div>
+              </div>
+            )}
             <div className="flex items-center justify-center md:justify-end gap-4">
               {isSignedIn ? (
                 <UserButton />
