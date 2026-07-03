@@ -34,9 +34,7 @@ const About = () => {
             <span>
               <MapPin size={30} />
             </span>
-            <span className="items-end text-xl">
-              123 Healthcare Ave, State 12345
-            </span>
+            <span className="items-end text-xl">123 Healthcare Ave, State</span>
           </h1>
         </div>
       </div>

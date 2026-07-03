@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 const Demo = () => {
@@ -16,8 +17,11 @@ const Demo = () => {
           scheduling and team coordination.
         </p>
 
-        <Button className="mt-10 w-full sm:w-auto px-8 h-12 bg-white text-black font-bold hover:bg-gray-100">
-          Book a Demo
+        <Button
+          variant="outline"
+          className="mt-10 w-full sm:w-auto px-8 h-12 bg-white text-black font-bold hover:bg-gray-100"
+        >
+          <Link href="/demo">Book a Demo</Link>
         </Button>
       </div>
     </div>
