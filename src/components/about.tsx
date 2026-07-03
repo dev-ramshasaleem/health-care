@@ -4,8 +4,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr_1fr_1fr] gap-16 px-30 py-16">
-      
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr] gap-10 lg:gap-16 px-4 md:px-8 lg:px-20 py-16">
       {/* Column 1 */}
       <div>
         <div className="flex flex-col">
@@ -18,16 +17,13 @@ const About = () => {
             </h1>
           </div>
 
-          <h1 className="mt-3 text-black text-xl">
-            The Intelligent Platform for Streamlined <br />
-            Healthcare Workflows.
-          </h1>
-          <h1 className="flex gap-4 mt-3 text-black">
-            <span>
-              <Phone size={30} />
-            </span>
-            <span className="items-end text-xl">+92 (333) 711-1265</span>
-          </h1>
+          <p className="mt-3 text-gray-700 text-base md:text-lg max-w-sm">
+            The Intelligent Platform for Streamlined Healthcare Workflows.
+          </p>
+          <div className="flex items-center gap-3 mt-4">
+            <Phone className="w-5 h-5 md:w-6 md:h-6" />
+            <span className="text-sm md:text-lg">+92 (333) 711-1265</span>
+          </div>
           <h1 className="flex gap-4 mt-3 text-black">
             <span>
               <Mail size={30} />
@@ -44,12 +40,12 @@ const About = () => {
           </h1>
         </div>
       </div>
-      
+
       {/* Column 2 */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Getting Started</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-4">Getting Started</h2>
 
-        <div className="flex flex-col gap-3 text-lg">
+        <div className="flex flex-col gap-3 text-base md:text-lg">
           <span>Introduction</span>
           <span>Dashboard</span>
           <span>Scheduling</span>

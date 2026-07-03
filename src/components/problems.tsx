@@ -32,7 +32,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
+        <Card className="flex size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
           <Annoyed className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">
@@ -44,7 +44,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="size-16px w-full max-w-sm h-auto bg-blue-100 border-blue-100">
+        <Card className="flex size-16px w-80 h-auto bg-blue-100 border-blue-100">
           <Link className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">Lack of Insight</CardTitle>

@@ -27,195 +27,150 @@ const Price = (props: Props) => {
         plans scale with your needs.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
-        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140   border-blue-800">
+        <Card className="w-full max-w-sm mx-auto flex flex-col   border-blue-800">
           <CardHeader>
-            <div className="flex ">
+            <div className="flex items-center gap-3">
               <StarCheck className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="font-bold flex flex-col gap-8 text-2xl">
+              <CardTitle className="text-xl md:text-2xl font-bold">
                 Starter
               </CardTitle>
             </div>
-            <div className="flex mt-4">
-              <CardDescription className="text-4xl text-left font-bold text-blue-600 mr-2">
+            <div className="flex items-end gap-2 mt-4">
+              <CardDescription className="text-3xl md:text-4xl font-bold text-blue-600">
                 $49
               </CardDescription>
-              <CardDescription className="text-xl flex items-end text-black-200">
+              <CardDescription className="text-base md:text-lg text-gray-500">
                 /month
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent className="text-black-100 mt-2">
-            <p>
-              Perfect for independent practices looking <br /> to automate
-              patient scheduling.
+          <CardContent>
+            <p className="text-sm md:text-base text-gray-600 leading-6">
+              Perfect for independent practices looking to automate patient
+              scheduling.
             </p>
 
-            <Button className="justify-center bg-black text-white h-15 w-full mt-6 text-xl hover:bg-blue-500 ">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
               Get Started
             </Button>
 
-            <div className="space-y-2 mt-6 font-bold text-xl">
-              Features Include
-              <div className="flex mt-2">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  1 Admin + up to 5 Staff Accounts
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  AI Scheduling Assistant
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Secure Messaging Portal
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Email Support
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Basic Analytics
-                </CardTitle>
-                <br />
+            <div className="mt-8">
+              <h3 className="font-bold text-lg md:text-xl mb-4">
+                Features Include
+              </h3>
+
+              <div className="space-y-4">
+                {[
+                  "1 Admin + up to 5 Staff Accounts",
+                  "AI Scheduling Assistant",
+                  "Secure Messaging Portal",
+                  "Email Support",
+                  "Basic Analytics",
+                ].map((feature) => (
+                  <div key={feature} className="flex items-center gap-2">
+                    <CircleCheck className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <span className="text-sm md:text-base">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </CardContent>
         </Card>
-        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140  border-blue-800">
+        <Card className="w-full max-w-sm mx-auto flex flex-col   border-blue-800">
           <CardHeader>
-            <div className="flex ">
+            <div className="flex items-center gap-3">
               <Ribbon className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="font-bold flex flex-col gap-8 text-2xl">
+              <CardTitle className="text-xl md:text-2xl font-bold">
                 Premium Plan
               </CardTitle>
             </div>
-            <div className="flex mt-4">
-              <CardDescription className="text-4xl text-left font-bold text-blue-600 mr-2">
+            <div className="flex items-end gap-2 mt-4">
+              <CardDescription className="text-3xl md:text-4xl font-bold text-blue-600">
                 $99
               </CardDescription>
-              <CardDescription className="text-xl flex items-end text-black-200">
+              <CardDescription className="text-base md:text-lg text-gray-500">
                 /month
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent className="text-black-100 mt-2">
-            <p>
-              Best for mid-size healthcare organizations <br /> that want full
+          <CardContent>
+            <p className="text-sm md:text-base text-gray-600 leading-6">
+              Best for mid-size healthcare organizations that want full
               visibility and automation.
             </p>
 
-            <Button className="justify-center bg-black text-white h-15 w-full mt-6 text-xl hover:bg-blue-500">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
               Get Started
             </Button>
 
-            <div className="space-y-2 mt-6 font-bold text-xl">
-              Includes Everything in Starter, Plus
-              <div className="flex mt-2">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Advanced AI Workflow Automation
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Custom Branding
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Priority Support
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Detailed Analytics Dashboard
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  EHR & Billing Integrations
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Unlimited Patient Records
-                </CardTitle>
+            <div className="mt-8">
+              <h3 className="font-bold text-lg md:text-xl mb-4">
+                Includes Everything in Starter, Plus
+              </h3>
+
+              <div className="space-y-4">
+                {[
+                  "Advance AI Workflow Automation",
+                  "Custom Branding",
+                  "Priority Support",
+                  "Detailed Analytics Dashboard",
+                  "EHR & Billing Integrations",
+                  "Unlimited Patient Records",
+                ].map((feature) => (
+                  <div key={feature} className="flex items-center gap-2">
+                    <CircleCheck className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <span className="text-sm md:text-base">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </CardContent>
         </Card>
-        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140  border-blue-800">
+        <Card className="w-full max-w-sm mx-auto flex flex-col  border-blue-800">
           <CardHeader>
-            <div className="flex ">
+            <div className="flex items-center gap-3">
               <Trophy className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="font-bold flex flex-col gap-8 text-2xl">
+              <CardTitle className="text-xl md:text-2xl font-bold">
                 Enterprise Plan
               </CardTitle>
             </div>
-            <div className="flex mt-4">
-              <CardDescription className="text-4xl text-left font-bold text-blue-600 mr-2">
+            <div className="flex items-end gap-2 mt-4">
+              <CardDescription className="text-3xl md:text-4xl font-bold text-blue-600">
                 $299
               </CardDescription>
-              <CardDescription className="text-xl flex items-end text-black-200">
+              <CardDescription className="text-base md:text-lg text-gray-500">
                 /month
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent className="text-black-100 mt-2">
-            <p>
+          <CardContent>
+            <p className="text-sm md:text-base text-gray-600 leading-6">
               Tailored for large-scale healthcare systems that need
               enterprise-grade scalability.
             </p>
 
-            <Button className="justify-center bg-black text-white h-15 w-full mt-6 text-xl hover:bg-blue-500">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
               Get Started
             </Button>
 
-            <div className="space-y-2 mt-6 font-bold text-xl">
-              Includes Everything in Professional, Plus
-              <div className="flex mt-2">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Dedicated Account Manager
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  API Access & Custom Integrations
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  24/7 Support
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  Staff Trainig & Onboarding
-                </CardTitle>
-              </div>
-              <div className="flex ">
-                <CircleCheck className=" w-8 h-8 text-gray-400 mr-2 p-1" />
-                <CardTitle className=" flex flex-col gap-8 text-sm justify-center">
-                  SLA-backed Uptime Guarantee
-                </CardTitle>
+            <div className="mt-8">
+              <h3 className="font-bold text-lg md:text-xl mb-4">
+                Include Everything in Professional, Plus
+              </h3>
+
+              <div className="space-y-4">
+                {[
+                  "Dedicated Account Manager",
+                  "API Access & Custom Integrations",
+                  "24/7 Support",
+                  "Staff Training & Onboarding",
+                  "SLA-backend Uptime Guarantee",
+                ].map((feature) => (
+                  <div key={feature} className="flex items-center gap-2">
+                    <CircleCheck className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <span className="text-sm md:text-base">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </CardContent>
