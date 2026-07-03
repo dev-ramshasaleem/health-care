@@ -23,7 +23,7 @@ const Navbar = () => {
         gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
       />
       <header className="relative z-50 mt-2  mx-auto max-w-5xl rounded-lg border bg-white shadow-md border-white/10">
-        <div className="grid grid-cols-3 items-center px-4 py-3">
+        <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             <Image src="/Plus.png" alt="icon" width={25} height={25} />
 
@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex justify-end items-center gap-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="relative z-50"
+              className="relative z-50 md:hidden"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />

@@ -10,19 +10,18 @@ import { Annoyed, Clock, Link } from "lucide-react";
 
 const Problems = () => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16">
       <div className="w-fit border border-blue-200 bg-blue-100 text-blue-600 rounded-2xl px-4 py-1">
         Problems
       </div>
-
-      <h1 className="mt-6 text-center font-bold text-2xl md:text-4xl text-black">
+      <h1 className="mt-6 text-center font-bold text-3xl md:text-5xl">
         The Hidden Drain on Healthcare Teams
       </h1>
-      <p className="mt-4 text-black-200  text-center">
+      <p className="mt-4 text-black-200  text-center max-w-2xl px-2">
         Healthcare should be focused on the patient, but outdated system turn
-        coordination into <br /> a massive administrative burden.
+        coordination into a massive administrative burden.
       </p>
-      <div className="flex gap-6 mx-auto mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
         <Card className="flex size-16px w-80 h-auto  bg-blue-100 border-blue-800">
           <Clock className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
@@ -45,7 +44,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="size-16px w-80 h-auto  bg-blue-100 border-blue-100">
+        <Card className="size-16px w-full max-w-sm h-auto bg-blue-100 border-blue-100">
           <Link className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">Lack of Insight</CardTitle>

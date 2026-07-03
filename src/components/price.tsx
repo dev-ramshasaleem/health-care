@@ -14,7 +14,7 @@ type Props = {};
 
 const Price = (props: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16">
       <div className="w-fit border border-blue-200 bg-blue-100 text-blue-600 rounded-2xl px-4 py-1">
         Pricing
       </div>
@@ -22,12 +22,12 @@ const Price = (props: Props) => {
       <h1 className="mt-6 text-center font-bold text-2xl md:text-4xl text-black">
         Simple, Transparent Pricing for <br /> Every Healthcare Team
       </h1>
-      <p className="mt-4 text-black-200  text-center">
+      <p className="mt-4 text-center text-gray-600 max-w-2xl">
         Whether you're managing a small clinic or a milti-location hospital, our
-        plans scale <br /> with your needs.
+        plans scale with your needs.
       </p>
-      <div className="flex gap-6 mx-auto mt-10">
-        <Card className="flex size-16px w-95 h-140   border-blue-800">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
+        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140   border-blue-800">
           <CardHeader>
             <div className="flex ">
               <StarCheck className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
@@ -90,8 +90,7 @@ const Price = (props: Props) => {
             </div>
           </CardContent>
         </Card>
-
-        <Card className="flex size-16px w-95 h-140  border-blue-800">
+        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140  border-blue-800">
           <CardHeader>
             <div className="flex ">
               <Ribbon className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
@@ -159,8 +158,7 @@ const Price = (props: Props) => {
             </div>
           </CardContent>
         </Card>
-
-        <Card className="flex size-16px w-95 h-140  border-blue-800">
+        <Card className="w-full max-w-sm mx-auto size-16px flex flex-col w-95 h-140  border-blue-800">
           <CardHeader>
             <div className="flex ">
               <Trophy className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
