@@ -27,10 +27,17 @@ import {
 } from "@/components/ui/popover";
 import { CalendarIcon } from "lucide-react";
 import { format, startOfToday } from "date-fns";
+import { useRouter } from "next/navigation";
 
 export default function DemoForm() {
   const [date, setDate] = React.useState<Date>();
   const today = startOfToday();
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push("/success");
+  };
   return (
     <div className="flex justify-center px-4 py-16">
       <Card className="w-full text-black max-w-xl shadow-lg bg-gradient-to-b from-gray-300 to-white">
@@ -46,7 +53,7 @@ export default function DemoForm() {
         </CardHeader>
 
         <CardContent>
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
@@ -131,8 +138,12 @@ export default function DemoForm() {
             </div>
 
             {/* Button */}
+
             <div className="flex justify-center">
-              <Button className="h-11 bg-black text-white px-8 hover:bg-gray-800">
+              <Button
+                onClick={() => router.push("/success")}
+                className="h-11 bg-black text-white px-8 hover:bg-gray-800"
+              >
                 Book My Demo
               </Button>
             </div>
