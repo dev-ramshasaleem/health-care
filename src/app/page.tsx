@@ -21,9 +21,9 @@ export default function Home() {
             The Future of Healthcare
             <br /> Workflow is Here
           </h1>
-          <p className="mt-4 text-black-200 text-xl">
+          <p className="mt-4 text-black-200 max-w-2xl text-xl">
             Immeidately reduce administrative workload, boost staff
-            satisfaction, and enhance patient <br /> communication with our
+            satisfaction, and enhance patient communication with our
             intuitive, all-in-one coordination assistant.
           </p>
           <div className="flex gap-4 mt-6">

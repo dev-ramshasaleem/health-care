@@ -21,8 +21,8 @@ const About = () => {
             The Intelligent Platform for Streamlined Healthcare Workflows.
           </p>
           <div className="flex items-center gap-3 mt-4">
-            <Phone className="w-5 h-5 md:w-6 md:h-6" />
-            <span className="text-sm md:text-lg">+92 (333) 711-1265</span>
+            <Phone size={30} />
+            <span className="text-xl md:text-lg">+92 (333) 711-1265</span>
           </div>
           <h1 className="flex gap-4 mt-3 text-black">
             <span>
