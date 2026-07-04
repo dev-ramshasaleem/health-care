@@ -21,8 +21,8 @@ const Problems = () => {
         Healthcare should be focused on the patient, but outdated system turn
         coordination into a massive administrative burden.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 w-full max-w-6xl">
-        <Card className="flex size-16px w-80 h-auto  bg-blue-100 text-blue-100">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
+        <Card className="flex flex-col w-full max-w-sm mx-auto size-16px w-80 h-auto  bg-blue-100 text-blue-100">
           <Clock className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl text-black">Lack of Insight</CardTitle>
@@ -32,7 +32,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="flex size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
+        <Card className="flex flex-col w-full max-w-sm mx-auto size-16px w-80 h-auto   bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
           <Annoyed className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">
@@ -44,7 +44,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="flex size-16px w-80 h-auto bg-blue-100 text-blue-100">
+        <Card className="fflex flex-col w-full max-w-sm mx-auto size-16px w-80 h-auto  bg-blue-100 text-blue-100">
           <Link className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl text-black">Lack of Insight</CardTitle>
