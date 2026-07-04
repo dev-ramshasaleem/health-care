@@ -21,13 +21,8 @@ const Problems = () => {
         Healthcare should be focused on the patient, but outdated system turn
         coordination into a massive administrative burden.
       </p>
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
-        <Card className="flex size-16px w-80 h-auto  bg-blue-100 border-blue-800">
-=======
-      <div className="flex gap-6 mx-auto mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 w-full max-w-6xl">
         <Card className="flex size-16px w-80 h-auto  bg-blue-100 text-blue-100">
->>>>>>> 79b9b03 (update for mobile)
           <Clock className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl text-black">Lack of Insight</CardTitle>
@@ -37,11 +32,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-<<<<<<< HEAD
         <Card className="flex size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 border-blue-800 text-white">
-=======
-        <Card className="flex size-16px w-80 h-auto  bg-gradient-to-b from-blue-200 to-blue-500 text-white">
->>>>>>> 79b9b03 (update for mobile)
           <Annoyed className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl">
@@ -53,11 +44,7 @@ const Problems = () => {
             </CardDescription>
           </CardHeader>
         </Card>
-<<<<<<< HEAD
-        <Card className="flex size-16px w-80 h-auto bg-blue-100 border-blue-100">
-=======
-        <Card className="flex size-16px w-80 h-auto  bg-blue-100 text-blue-100">
->>>>>>> 79b9b03 (update for mobile)
+        <Card className="flex size-16px w-80 h-auto bg-blue-100 text-blue-100">
           <Link className="border-6 border-white rounded-lg bg-white w-8 h-8 text-blue-400 ml-6 mt-5" />
           <CardHeader>
             <CardTitle className="font-bold text-xl text-black">Lack of Insight</CardTitle>
