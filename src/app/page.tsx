@@ -16,8 +16,8 @@ export default function Home() {
     <div>
       <Navbar />
       <main className="min-h-screen w-full mx-auto">
-        <div className="absolute inset-0 flex flex-col  items-center justify-center px-4 text-center">
-          <h1 className="text-black text-5xl  md:text-5xl lg:text-6xl  font-bold pt-80">
+        <div className="absolute inset-0 flex flex-col items-center justify-start pt-24 md:pt-36 lg:pt-48 px-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             The Future of Healthcare
             <br /> Workflow is Here
           </h1>
@@ -36,14 +36,20 @@ export default function Home() {
 
             <Button
               variant="outline"
-              className="w-35 h-12 text-black border-black bg-white hover:bg-black/10"
+              className="w-35 h-12 text-black border-gray-300 bg-white hover:bg-black/10"
             >
               <Link href="#price">View Pricing</Link>
             </Button>
           </div>
           <br />
           <br />
-          <Image src="/care.png" alt="care" width={1200} height={60} />
+          <Image
+            src="/care.png"
+            alt="care"
+            width={1200}
+            height={600}
+            className="w-full max-w-6xl h-auto mt-10"
+          />
           <LogoCloud />
         </div>
         <div className="pt-50 min-h-screen">

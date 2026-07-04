@@ -23,7 +23,7 @@ const Features = (props: Props) => {
         specific challenges.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 w-full max-w-6xl">
-        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-b from-purple-200 to-purple-90 border-blue-800">
+        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-b from-purple-200 to-purple-90 text-white">
           <div className="flex justify-center ">
             <Image
               src="/automated.png"
@@ -33,7 +33,7 @@ const Features = (props: Props) => {
               className="w-full max-w-[280px] h-auto rounded-lg border-8 border-purple-200"
             />
           </div>
-          <CardHeader>
+          <CardHeader className="text-black">
             <CardTitle className="font-bold text-xl">
               Automated, Zero-Friction Booking
             </CardTitle>
@@ -44,7 +44,7 @@ const Features = (props: Props) => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-t from-orange-200 to-orange-90 border-blue-800">
+        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-t from-orange-200 to-orange-90 text-white">
           <div className="flex justify-center ">
             <Image
               src="/unified.png"
@@ -54,7 +54,7 @@ const Features = (props: Props) => {
               className="w-full max-w-[280px] h-auto rounded-lg border-8 border-orange-180"
             />
           </div>
-          <CardHeader>
+          <CardHeader className="text-black"> 
             <CardTitle className="font-bold text-xl">
               Unified Communication Hub
             </CardTitle>
@@ -65,7 +65,7 @@ const Features = (props: Props) => {
             </CardDescription>
           </CardHeader>
         </Card>
-        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-b from-blue-200 to-blue-90 border-blue-800">
+        <Card className="w-full max-w-sm mx-auto size-16px w-80 h-auto flex flex-col bg-gradient-to-b from-blue-200 to-blue-90 text-white">
           <div className="flex justify-center ">
             <Image
               src="/proactive.png"
@@ -75,7 +75,7 @@ const Features = (props: Props) => {
               className="w-full max-w-[280px] h-auto rounded-lg border-8 border-blue-200"
             />
           </div>
-          <CardHeader>
+          <CardHeader className="text-black">
             <CardTitle className="font-bold text-xl">
               Proactive Workflow Assistant
             </CardTitle>

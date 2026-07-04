@@ -14,7 +14,7 @@ type Props = {};
 
 const Price = (props: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16 text-blue-600">
       <div className="w-fit border border-blue-200 bg-blue-100 text-blue-600 rounded-2xl px-4 py-1">
         Pricing
       </div>
@@ -31,7 +31,7 @@ const Price = (props: Props) => {
           <CardHeader>
             <div className="flex items-center gap-3">
               <StarCheck className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="text-xl md:text-2xl font-bold">
+              <CardTitle className="text-xl md:text-2xl font-bold text-black">
                 Starter
               </CardTitle>
             </div>
@@ -50,11 +50,11 @@ const Price = (props: Props) => {
               scheduling.
             </p>
 
-            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-gradient-to-b from-gray-700 to-black hover:from-blue-500 hover:to-blue-700 text-white">
               Get Started
             </Button>
 
-            <div className="mt-8">
+            <div className="mt-8 text-black">
               <h3 className="font-bold text-lg md:text-xl mb-4">
                 Features Include
               </h3>
@@ -80,7 +80,7 @@ const Price = (props: Props) => {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Ribbon className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="text-xl md:text-2xl font-bold">
+              <CardTitle className="text-xl md:text-2xl font-bold text-black">
                 Premium Plan
               </CardTitle>
             </div>
@@ -99,11 +99,11 @@ const Price = (props: Props) => {
               visibility and automation.
             </p>
 
-            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-gradient-to-b from-gray-700 to-black hover:from-blue-500 hover:to-blue-700 text-white">
               Get Started
             </Button>
 
-            <div className="mt-8">
+            <div className="mt-8 text-black">
               <h3 className="font-bold text-lg md:text-xl mb-4">
                 Includes Everything in Starter, Plus
               </h3>
@@ -130,7 +130,7 @@ const Price = (props: Props) => {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Trophy className="border-1 border-blue-400 rounded-full bg-white w-8 h-8 text-blue-400 mr-3 p-1" />
-              <CardTitle className="text-xl md:text-2xl font-bold">
+              <CardTitle className="text-xl md:text-2xl font-bold text-black">
                 Enterprise Plan
               </CardTitle>
             </div>
@@ -149,11 +149,11 @@ const Price = (props: Props) => {
               enterprise-grade scalability.
             </p>
 
-            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-black hover:bg-blue-500 text-white">
+            <Button className="w-full mt-6 h-12 md:h-14 text-lg bg-gradient-to-b from-gray-700 to-black  hover:from-blue-500 hover:to-blue-700 text-white">
               Get Started
             </Button>
 
-            <div className="mt-8">
+            <div className="mt-8 text-black">
               <h3 className="font-bold text-lg md:text-xl mb-4">
                 Include Everything in Professional, Plus
               </h3>
