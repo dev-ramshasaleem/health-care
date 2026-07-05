@@ -47,11 +47,11 @@ export default function Home() {
             src="/care.png"
             alt="care"
             width={1200}
-            height={800}
+            height={400}
             className="w-full max-w-6xl h-auto mt-15"
           />
         </div>
-        <div className="relative z-10 lg:pt-70">
+        <div className="relative z-10 sm:pt-4 lg:pt-70">
   <LogoCloud />
 </div>
         <div className="relative min-h-screen">
