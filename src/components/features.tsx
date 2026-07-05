@@ -80,7 +80,7 @@ const Features = (props: Props) => {
               Proactive Workflow Assistant
             </CardTitle>
             <CardDescription className=" text-left">
-              Oyr AI identifies bottlenecks and automates routine tasks,
+              Our AI identifies bottlenecks and automates routine tasks,
               transforming your workflow from reactive chaos to proactive,
               efficient coordination.
             </CardDescription>

@@ -16,6 +16,7 @@ export default function Home() {
     <div>
       <Navbar />
       <main className="min-h-screen w-full mx-auto">
+
         <div className="absolute inset-0 flex flex-col items-center justify-start pt-24 md:pt-36 lg:pt-48 px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             The Future of Healthcare
@@ -23,8 +24,8 @@ export default function Home() {
           </h1>
           <p className="mt-4 text-black-200 max-w-2xl text-xl">
             Immeidately reduce administrative workload, boost staff
-            satisfaction, and enhance patient communication with our
-            intuitive, all-in-one coordination assistant.
+            satisfaction, and enhance patient communication with our intuitive,
+            all-in-one coordination assistant.
           </p>
           <div className="flex gap-4 mt-6">
             <Button
@@ -41,36 +42,40 @@ export default function Home() {
               <Link href="#price">View Pricing</Link>
             </Button>
           </div>
-          <br />
-          <br />
+          
           <Image
             src="/care.png"
             alt="care"
             width={1200}
-            height={600}
-            className="w-full max-w-6xl h-auto mt-10"
+            height={800}
+            className="w-full max-w-6xl h-auto mt-15"
           />
-          <LogoCloud />
         </div>
-        <div className="pt-50 min-h-screen">
-          <Problems />
-        </div>
-        <div id="features" className="pt-20 min-h-screen">
-          <Features />
-        </div>
-        <div id="blogs" className="pt-10 min-h-screen">
-          <Blogs />
-        </div>
-        <div id="price" className="pt-10 min-h-screen">
-          <Price />
-          <br />
-          <Faq />
-        </div>
-        <div className="pt-10 ">
-          <Demo />
-        </div>
-        <div id="about" className="pt-30 min-h-screen">
-          <About />
+        <div className="relative z-10 lg:pt-70">
+  <LogoCloud />
+</div>
+        <div className="relative min-h-screen">
+          <div className=" ">
+            <Problems />
+          </div>
+          <div id="features" className="">
+            <Features />
+          </div>
+          <div id="blogs" className="">
+            <Blogs />
+          </div>
+          <div id="price" className="">
+            <Price />
+          </div>
+          <div className=" ">
+            <Faq />
+          </div>
+          <div className=" ">
+            <Demo />
+          </div>
+          <div id="about" className="">
+            <About />
+          </div>
         </div>
       </main>
     </div>
