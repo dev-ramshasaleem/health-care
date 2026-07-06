@@ -10,14 +10,26 @@ import Price from "../components/price";
 import Faq from "../components/faq";
 import Demo from "../components/demo";
 import About from "../components/about";
+import { Spotlight } from "../components/ui/spotlight-new";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute top-0 left-0 right-0 h-[900px] lg:h-[1000px] -z-10 ">
+        <Spotlight
+          width={900}
+          height={1000}
+          duration={8}
+          xOffset={7}
+          gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 80%)"
+          gradientSecond="radial-gradient(50% 50% at 50% 50%,   rgba(59,130,246,0.15) 50%, transparent 100%)"
+          gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
+        />
+      </div>
       <Navbar />
-      <main className="min-h-screen w-full mx-auto">
-
-        <div className="absolute inset-0 flex flex-col items-center justify-start pt-24 md:pt-36 lg:pt-48 px-4 text-center">
+      <main className="w-full">
+        <section className="relative z-10 flex min-h-[90vh] flex-col items-center justify-center px-4 pt-24 text-center">
+          {" "}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             The Future of Healthcare
             <br /> Workflow is Here
@@ -42,7 +54,6 @@ export default function Home() {
               <Link href="#price">View Pricing</Link>
             </Button>
           </div>
-          
           <Image
             src="/care.png"
             alt="care"
@@ -50,10 +61,10 @@ export default function Home() {
             height={400}
             className="w-full max-w-6xl h-auto mt-15"
           />
+        </section>
+        <div className="py-12 md:py-16">
+          <LogoCloud />
         </div>
-        <div className="relative z-10 sm:pt-4 lg:pt-70">
-  <LogoCloud />
-</div>
         <div className="relative min-h-screen">
           <div className=" ">
             <Problems />
