@@ -13,7 +13,7 @@ type Props = {};
 
 const Blogs = (props: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16 text-blue-600">
       <div className="w-fit border border-blue-200 bg-blue-100 text-blue-600 rounded-2xl px-4 py-1">
         Testimonial
       </div>
