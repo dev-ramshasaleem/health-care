@@ -2,15 +2,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "./ui/spotlight-new";
-import { UserButton, useUser } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isSignedIn } = useUser();
   return (
     <section>
       {/* <Spotlight
@@ -77,18 +74,14 @@ const Navbar = () => {
               </div>
             )}
             <div className="flex items-center justify-center md:justify-end gap-4">
-              {isSignedIn ? (
-                <UserButton />
-              ) : (
-                <Link href="/sign-in">
-                  <Button
-                    variant="outline"
-                    className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
-                  >
-                    Login
-                  </Button>
-                </Link>
-              )}
+              <Link href="/sign-in">
+                <Button
+                  variant="outline"
+                  className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
+                >
+                  Login
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
