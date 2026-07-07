@@ -89,26 +89,55 @@ const Navbar = () => {
                   </Button>
                 </Link>
               ) : (
-                <div className="flex items-center gap-3">
-                  <Avatar>
-                    <AvatarFallback>
-                      {session.user.name.charAt(0).toUpperCase()}
-                    </AvatarFallback>
-                    <AvatarBadge className="bg-green-600 dark:bg-green-800" />
-                  </Avatar>
+                <div className="flex items-center gap-3 relative">
+                  {/* Mobile Avatar + Dropdown */}
+                  <div className="md:hidden relative">
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                      <Avatar>
+                        <AvatarFallback>
+                          {session.user.name.charAt(0).toUpperCase()}
+                        </AvatarFallback>
+                        <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+                      </Avatar>
+                    </button>
 
-                  <span className="font-semibold">{session.user.name}</span>
+                    {isOpen && (
+                      <div className="absolute right-0 top-12 w-32 rounded-lg border bg-white shadow-lg p-2">
+                        <Button
+                          variant="ghost"
+                          className="w-full justify-start"
+                          onClick={async () => {
+                            await authClient.signOut();
+                            window.location.reload();
+                          }}
+                        >
+                          Logout
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                  {/* Desktop User Info */}
+                  <div className="hidden md:flex items-center gap-3">
+                    <Avatar>
+                      <AvatarFallback>
+                        {session.user.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                      <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+                    </Avatar>
 
-                  <Button
-                    variant="outline"
-                    onClick={async () => {
-                      await authClient.signOut();
-                      window.location.reload();
-                    }}
-                    className="bg-black text-white"
-                  >
-                    Logout
-                  </Button>
+                    <span className="font-semibold">{session.user.name}</span>
+
+                    <Button
+                      variant="outline"
+                      onClick={async () => {
+                        await authClient.signOut();
+                        window.location.reload();
+                      }}
+                      className="bg-black text-white"
+                    >
+                      Logout
+                    </Button>
+                  </div>
                 </div>
               )}
             </div>
