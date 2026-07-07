@@ -109,6 +109,9 @@ const Navbar = () => {
 
                     {profileOpen && (
                       <div className="absolute right-0 top-12 w-32 rounded-lg border bg-white shadow-lg p-2">
+                        <span className="font-semibold">
+                          {session.user.name}
+                        </span>
                         <Button
                           variant="ghost"
                           className="w-full justify-start"
