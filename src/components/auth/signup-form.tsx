@@ -7,6 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -29,13 +30,18 @@ export default function SignupForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    console.log("SUBMIT CLICKED");
+
     setLoading(true);
 
-    const { error } = await authClient.signUp.email({
+    const { data, error } = await authClient.signUp.email({
       name: formData.name,
       email: formData.email,
       password: formData.password,
     });
+
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
 
     setLoading(false);
 
@@ -44,7 +50,8 @@ export default function SignupForm() {
       return;
     }
 
-    router.push("/dashboard");
+    router.push("/");
+    router.refresh();
   }
 
   return (
@@ -89,8 +96,11 @@ export default function SignupForm() {
           required
         />
       </div>
-
-      <Button type="submit" disabled={loading} className="w-full">
+      <Button
+        type="submit"
+        disabled={loading}
+        className="w-full border bg-black text-white"
+      >
         {loading ? "Creating account..." : "Create Account"}
       </Button>
     </form>

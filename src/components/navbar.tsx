@@ -5,9 +5,12 @@ import { Spotlight } from "./ui/spotlight-new";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, AvatarBadge, AvatarFallback } from "@/components/ui/avatar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, isPending } = authClient.useSession();
   return (
     <section>
       {/* <Spotlight
@@ -74,14 +77,39 @@ const Navbar = () => {
               </div>
             )}
             <div className="flex items-center justify-center md:justify-end gap-4">
-              <Link href="/sign-in">
-                <Button
-                  variant="outline"
-                  className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
-                >
-                  Login
-                </Button>
-              </Link>
+              {isPending ? (
+                <Button disabled>Loading...</Button>
+              ) : !session ? (
+                <Link href="/login">
+                  <Button
+                    variant="outline"
+                    className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
+                  >
+                    Login
+                  </Button>
+                </Link>
+              ) : (
+                <div className="flex items-center gap-3">
+                  <Avatar>
+                    <AvatarFallback>
+                      {session.user.name.charAt(0).toUpperCase()}
+                    </AvatarFallback>
+                    <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+                  </Avatar>
+
+                  <span className="font-semibold">{session.user.name}</span>
+
+                  <Button
+                    variant="outline"
+                    onClick={async () => {
+                      await authClient.signOut();
+                      window.location.reload();
+                    }}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </div>
