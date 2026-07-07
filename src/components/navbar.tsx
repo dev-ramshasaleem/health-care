@@ -114,7 +114,7 @@ const Navbar = () => {
                         </span>
                         <Button
                           variant="ghost"
-                          className="w-full justify-start"
+                          className="w-full justify-start border border-black"
                           onClick={async () => {
                             await authClient.signOut();
                             window.location.reload();
