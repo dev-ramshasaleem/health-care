@@ -11,6 +11,7 @@ import { Avatar, AvatarBadge, AvatarFallback } from "@/components/ui/avatar";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data: session, isPending } = authClient.useSession();
+  const [profileOpen, setProfileOpen] = useState(false);
   return (
     <section>
       {/* <Spotlight
@@ -92,7 +93,12 @@ const Navbar = () => {
                 <div className="flex items-center gap-3 relative">
                   {/* Mobile Avatar + Dropdown */}
                   <div className="md:hidden relative">
-                    <button onClick={() => setIsOpen(!isOpen)}>
+                    <button
+                      onClick={() => {
+                        setProfileOpen(!profileOpen);
+                        setIsOpen(false);
+                      }}
+                    >
                       <Avatar>
                         <AvatarFallback>
                           {session.user.name.charAt(0).toUpperCase()}
@@ -101,7 +107,7 @@ const Navbar = () => {
                       </Avatar>
                     </button>
 
-                    {isOpen && (
+                    {profileOpen && (
                       <div className="absolute right-0 top-12 w-32 rounded-lg border bg-white shadow-lg p-2">
                         <Button
                           variant="ghost"
