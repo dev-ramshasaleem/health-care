@@ -105,6 +105,7 @@ const Navbar = () => {
                       await authClient.signOut();
                       window.location.reload();
                     }}
+                    className="bg-black text-white"
                   >
                     Logout
                   </Button>
