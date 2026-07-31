@@ -14,16 +14,16 @@ import { Spotlight } from "../components/ui/spotlight-new";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <div className="absolute top-0 left-0 right-0 h-[900px] lg:h-[1000px] -z-10 ">
+    <div className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[800px] md:h-[900px] lg:h-[1000px] -z-10 overflow-hidden">
         <Spotlight
-          width={900}
+          width={1000}
           height={1000}
           duration={8}
           xOffset={7}
-          gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 80%)"
-          gradientSecond="radial-gradient(50% 50% at 50% 50%,   rgba(59,130,246,0.15) 50%, transparent 100%)"
-          gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.2) 0%, transparent 100%)"
+          gradientFirst="radial-gradient(68.54% 68.72% at 50% 20%, rgba(59,130,246,0.25) 0%, rgba(59,130,246,0.12) 50%, transparent 80%)"
+          gradientSecond="radial-gradient(50% 50% at 50% 50%, rgba(59,130,246,0.12) 50%, transparent 100%)"
+          gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(6,182,212,0.15) 0%, transparent 100%)"
         />
       </div>
       <Navbar />

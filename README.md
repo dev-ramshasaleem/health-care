@@ -60,6 +60,12 @@ CLERK_SECRET_KEY=your_secret_key
 ```
 ---
 
+🌐 Live Demo
+
+👉 https://health-care-sand-eight.vercel.app/
+
+---
+
 ## 🎯 Future Improvements
 
 - ✅ Doctor Dashboard

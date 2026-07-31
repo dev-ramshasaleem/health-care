@@ -2,15 +2,16 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "./ui/spotlight-new";
-import { UserButton, useUser } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, AvatarBadge, AvatarFallback } from "@/components/ui/avatar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isSignedIn } = useUser();
+  const { data: session, isPending } = authClient.useSession();
+  const [profileOpen, setProfileOpen] = useState(false);
   return (
     <section>
       {/* <Spotlight
@@ -77,10 +78,10 @@ const Navbar = () => {
               </div>
             )}
             <div className="flex items-center justify-center md:justify-end gap-4">
-              {isSignedIn ? (
-                <UserButton />
-              ) : (
-                <Link href="/sign-in">
+              {isPending ? (
+                <Button disabled>Loading...</Button>
+              ) : !session ? (
+                <Link href="/login">
                   <Button
                     variant="outline"
                     className="px-3 py-2 md:px-4 md:py-4 bg-black text-white"
@@ -88,6 +89,65 @@ const Navbar = () => {
                     Login
                   </Button>
                 </Link>
+              ) : (
+                <div className="flex items-center gap-3 relative">
+                  {/* Mobile Avatar + Dropdown */}
+                  <div className="md:hidden relative">
+                    <button
+                      onClick={() => {
+                        setProfileOpen(!profileOpen);
+                        setIsOpen(false);
+                      }}
+                    >
+                      <Avatar>
+                        <AvatarFallback>
+                          {session.user.name.charAt(0).toUpperCase()}
+                        </AvatarFallback>
+                        <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+                      </Avatar>
+                    </button>
+
+                    {profileOpen && (
+                      <div className="absolute right-0 top-12 w-32 rounded-lg border bg-white shadow-lg p-2">
+                        <span className="font-semibold">
+                          {session.user.name}
+                        </span>
+                        <Button
+                          variant="ghost"
+                          className="w-full justify-start border border-black"
+                          onClick={async () => {
+                            await authClient.signOut();
+                            window.location.reload();
+                          }}
+                        >
+                          Logout
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                  {/* Desktop User Info */}
+                  <div className="hidden md:flex items-center gap-3">
+                    <Avatar>
+                      <AvatarFallback>
+                        {session.user.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                      <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+                    </Avatar>
+
+                    <span className="font-semibold">{session.user.name}</span>
+
+                    <Button
+                      variant="outline"
+                      onClick={async () => {
+                        await authClient.signOut();
+                        window.location.reload();
+                      }}
+                      className="bg-black text-white"
+                    >
+                      Logout
+                    </Button>
+                  </div>
+                </div>
               )}
             </div>
           </div>
