@@ -21,11 +21,11 @@ const Blogs = (props: Props) => {
       <h1 className="mt-6 text-center font-bold text-2xl md:text-4xl text-black">
         Building Trust with Real Results
       </h1>
-      <p className="mt-4 text-black-200  text-center">
+      <p className="mt-4 text-black  text-center">
         Our partners' success is the clearest metric of our commitment to
-        secure, human- <br /> centered workflow innovation.
+        secure, human centered workflow innovation.
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto">
         <div className="flex flex-col gap-6">
           <Card className="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 text-white">
             <div className="flex items-center gap-3 px-6 pt-6">
