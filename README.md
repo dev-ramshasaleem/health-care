@@ -25,7 +25,7 @@ CarePlus is a modern healthcare management web application built with **Next.js*
 | TypeScript | Type Safety |
 | Tailwind CSS | Styling |
 | Shadcn UI | UI Components |
-| Clerk | Authentication |
+| Better Auth | Authentication |
 | Lucide React | Icons |
 
 ---
@@ -50,14 +50,6 @@ cd careplus
 npm install
 ```
 
-### 4. Create Environment Variables
-
-Create a `.env.local` file in the root directory.
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
-CLERK_SECRET_KEY=your_secret_key
-```
 ---
 
 🌐 Live Demo
