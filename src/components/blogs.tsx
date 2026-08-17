@@ -41,16 +41,25 @@ const Blogs = (props: Props) => {
               </p>
             </CardContent>
 
-            <div className="flex items-center justify-between px-5 pb-5">
-              <Image
-                src="/frameflow.png"
-                alt="David"
-                width={200}
-                height={80}
-                className="h-auto"
-              />
+            <div className="flex items-center  justify-between px-5 pb-5">
+              <div className="flex  gap-3 px-2 pt-6">
+                {" "}
+                <Image
+                  src="/flow.png"
+                  alt="Liam"
+                  width={60}
+                  height={60}
+                  className="h-auto"
+                />
+                <div className="flex flex-col">
+                  <p className="text-lg font-semibold">David Kim</p>
+                  <p className="text-lg font-semibold text-white/60">
+                    CEO At Spectrum
+                  </p>
+                </div>
+              </div>
 
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white bg-blue-50">
+              <div className="flex h-10 w-10 mt-4 items-center justify-center rounded-lg border border-white bg-blue-50">
                 <X className="h-6 w-6 text-blue-500 stroke-[2.5]" />
               </div>
             </div>
@@ -186,7 +195,9 @@ const Blogs = (props: Props) => {
                 />
                 <div className="flex flex-col">
                   <p className="text-lg font-semibold">Liam Anderson</p>
-                  <p className=" font-semibold">CEO At Apex</p>
+                  <p className="text-lg font-semibold text-white/60">
+                    CEO At Apex
+                  </p>
                 </div>
               </div>
 
