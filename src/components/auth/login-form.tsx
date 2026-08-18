@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
-export default function LoginForm() {
+export default function LoginForm({ planId }: { planId?: string }) {
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
@@ -45,7 +45,7 @@ export default function LoginForm() {
 
     await authClient.getSession();
 
-    router.push("/");
+    router.push(planId ? `/payment?plan=${planId}` : "/");
     router.refresh();
   }
 

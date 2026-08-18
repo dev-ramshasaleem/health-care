@@ -8,8 +8,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import SignupForm from "@/src/components/auth/signup-form";
+import { getPlan } from "@/lib/plans";
 
-export default function SignupPage() {
+export default async function SignupPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const plan = getPlan((await searchParams).plan);
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-100 px-4">
       <Card className="w-full max-w-md">
@@ -19,17 +26,19 @@ export default function SignupPage() {
           </CardTitle>
 
           <CardDescription className="flex  items-center justify-center">
-            Create your Healthcare account.
+            {plan
+              ? `Create your account to continue with the ${plan.name}.`
+              : "Create your Healthcare account."}
           </CardDescription>
         </CardHeader>
 
         <CardContent>
-          <SignupForm />
+          <SignupForm planId={plan?.id} />
 
           <p className="mt-6 text-center text-sm">
             Already have an account?{" "}
             <Link
-              href="/"
+              href={plan ? `/login?plan=${plan.id}` : "/login"}
               className="font-medium text-blue-600 hover:underline"
             >
               Login

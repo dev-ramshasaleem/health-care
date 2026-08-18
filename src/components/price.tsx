@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,63 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CircleCheck, Ribbon, StarCheck, Trophy } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
+import { PLANS } from "@/lib/plans";
+import { CircleCheck } from "lucide-react";
 import Link from "next/link";
-import React from "react";
-
-const PLANS = [
-  {
-    id: "starter",
-    name: "Starter",
-    icon: StarCheck,
-    price: "$49",
-    description:
-      "Perfect for independent practices looking to automate patient scheduling.",
-    featuresHeading: "Features Include",
-    features: [
-      "1 Admin + up to 5 Staff Accounts",
-      "AI Scheduling Assistant",
-      "Secure Messaging Portal",
-      "Email Support",
-      "Basic Analytics",
-    ],
-  },
-  {
-    id: "premium",
-    name: "Premium Plan",
-    icon: Ribbon,
-    price: "$99",
-    description:
-      "Best for mid-size healthcare organizations that want full visibility and automation.",
-    featuresHeading: "Includes Everything in Starter, Plus",
-    features: [
-      "Advance AI Workflow Automation",
-      "Custom Branding",
-      "Priority Support",
-      "Detailed Analytics Dashboard",
-      "EHR & Billing Integrations",
-      "Unlimited Patient Records",
-    ],
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise Plan",
-    icon: Trophy,
-    price: "$299",
-    description:
-      "Tailored for large-scale healthcare systems that need enterprise-grade scalability.",
-    featuresHeading: "Include Everything in Professional, Plus",
-    features: [
-      "Dedicated Account Manager",
-      "API Access & Custom Integrations",
-      "24/7 Support",
-      "Staff Training & Onboarding",
-      "SLA-backend Uptime Guarantee",
-    ],
-  },
-];
 
 const Price = () => {
+  const { data: session, isPending } = authClient.useSession();
+
   return (
     <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-8 lg:px-16 py-16 text-blue-600">
       <div className="w-fit border border-blue-200 bg-blue-100 text-blue-600 rounded-2xl px-4 py-1">
@@ -80,6 +33,12 @@ const Price = () => {
         {PLANS.map((plan) => {
           const Icon = plan.icon;
 
+          // Signed in users go straight to payment, everyone else signs up
+          // first and carries their plan along to payment afterwards.
+          const href = session
+            ? `/payment?plan=${plan.id}`
+            : `/signup?plan=${plan.id}`;
+
           return (
             <Card
               key={plan.id}
@@ -94,7 +53,7 @@ const Price = () => {
                 </div>
                 <div className="flex items-end gap-2 mt-4">
                   <CardDescription className="text-3xl md:text-4xl font-bold text-blue-600">
-                    {plan.price}
+                    ${plan.price}
                   </CardDescription>
                   <CardDescription className="text-base md:text-lg text-gray-500">
                     /month
@@ -108,9 +67,10 @@ const Price = () => {
 
                 <Button
                   asChild
+                  disabled={isPending}
                   className="w-full mt-6 h-12 md:h-14 text-lg bg-gradient-to-b from-gray-700 to-black hover:from-blue-500 hover:to-blue-700 text-white"
                 >
-                  <Link href={`/signup?plan=${plan.id}`}>Get Started</Link>
+                  <Link href={href}>Get Started</Link>
                 </Button>
 
                 <div className="mt-8 text-black">
